@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pmo_2026/profil_widget.dart';
+import 'package:flutter_pmo_2026/ui/produk_form.dart';
 
 void main() {
   runApp(const MainApp());
@@ -12,7 +12,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Aplikasi Flutter Pertama',
-      home: const ProfilWidget(),
+      home: const ProdukForm(),
     );
   }
 }
