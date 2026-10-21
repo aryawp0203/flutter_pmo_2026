@@ -68,6 +68,7 @@ class ItemProduk extends StatelessWidget {
     return GestureDetector(
       child: Card(
         child: ListTile(
+          leading: Text(kodeProduk.toString()),
           title: Text(namaProduk.toString()),
           subtitle: Text(harga.toString()),
         ),
