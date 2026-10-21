@@ -10,6 +10,8 @@ class ColumnWidget extends StatelessWidget {
         title: const Text('Widget Column'),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
           Text('Kolom 1'),
           Text('Kolom 2'),
