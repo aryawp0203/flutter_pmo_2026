@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pmo_2026/ui/produk_detail.dart';
 import 'package:flutter_pmo_2026/ui/produk_form.dart';
 
 void main() {
