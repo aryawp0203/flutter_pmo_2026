@@ -10,6 +10,14 @@ class ProdukPage extends StatefulWidget {
 }
 
 class _ProdukPageState extends State<ProdukPage> {
+  final List<Map<String, dynamic>> listProduk = [
+    {'kodeProduk': 'A001', 'namaProduk': 'Kulkas', 'harga': 2500000},
+    {'kodeProduk': 'A002', 'namaProduk': 'Mesin Cuci', 'harga': 2000000},
+    {'kodeProduk': 'A003', 'namaProduk': 'TV', 'harga': 3000000},
+    {'kodeProduk': 'A004', 'namaProduk': 'AC', 'harga': 3500000},
+    {'kodeProduk': 'A005', 'namaProduk': 'Microwave', 'harga': 1500000},
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,27 +38,15 @@ class _ProdukPageState extends State<ProdukPage> {
           ),
         ],
       ),
-      body: ListView(
-        children: const [
-          // List 1
-          ItemProduk(kodeProduk: 'A001', namaProduk: 'Kulkas', harga: 2500000),
-          // List 2
-          ItemProduk(
-            kodeProduk: 'A002',
-            namaProduk: 'Mesin Cuci',
-            harga: 2000000,
-          ),
-          // List 3
-          ItemProduk(kodeProduk: 'A003', namaProduk: 'TV', harga: 3000000),
-          // List 4
-          ItemProduk(kodeProduk: 'A004', namaProduk: 'AC', harga: 3500000),
-          // List 5
-          ItemProduk(
-            kodeProduk: 'A005',
-            namaProduk: 'Microwave',
-            harga: 1500000,
-          ),
-        ],
+      body: ListView.builder(
+        itemCount: listProduk.length,
+        itemBuilder: (context, index) {
+          return ItemProduk(
+            kodeProduk: listProduk[index]['kodeProduk'],
+            namaProduk: listProduk[index]['namaProduk'],
+            harga: listProduk[index]['harga'],
+          );
+        },
       ),
     );
   }
