@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_pmo_2026/ui/produk_detail.dart';
 import 'package:flutter_pmo_2026/ui/produk_form.dart';
 
 class ProdukPage extends StatefulWidget {
@@ -56,11 +57,25 @@ class ItemProduk extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: ListTile(
-        title: Text(namaProduk.toString()),
-        subtitle: Text(harga.toString()),
+    return GestureDetector(
+      child: Card(
+        child: ListTile(
+          title: Text(namaProduk.toString()),
+          subtitle: Text(harga.toString()),
+        ),
       ),
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ProdukDetail(
+              kodeProduk: kodeProduk,
+              namaProduk: namaProduk,
+              harga: harga,
+            ),
+          ),
+        );
+      },
     );
   }
 }

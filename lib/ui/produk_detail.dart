@@ -4,10 +4,8 @@ class ProdukDetail extends StatefulWidget {
   final String? kodeProduk;
   final String? namaProduk;
   final int? harga;
-  final int? stok;
 
-  const ProdukDetail(
-      {super.key, this.kodeProduk, this.namaProduk, this.harga, this.stok});
+  const ProdukDetail({super.key, this.kodeProduk, this.namaProduk, this.harga});
 
   @override
   State<ProdukDetail> createState() => _ProdukDetailState();
@@ -17,9 +15,7 @@ class _ProdukDetailState extends State<ProdukDetail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Detail Produk'),
-      ),
+      appBar: AppBar(title: const Text('Detail Produk')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -49,15 +45,6 @@ class _ProdukDetailState extends State<ProdukDetail> {
                 fontSize: 16.0,
                 fontWeight: FontWeight.w600,
                 color: Colors.green,
-              ),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              "Stok : ${widget.stok}",
-              style: const TextStyle(
-                fontSize: 16.0,
-                fontWeight: FontWeight.w500,
-                color: Colors.deepOrange,
               ),
             ),
             const SizedBox(height: 24),
