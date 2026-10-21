@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_pmo_2026/ui/produk_detail.dart';
 
 class ProdukForm extends StatefulWidget {
   const ProdukForm({super.key});
@@ -54,6 +55,20 @@ class _ProdukFormState extends State<ProdukForm> {
   }
 
   ElevatedButton _tombolSimpan() {
-    return ElevatedButton(onPressed: () {}, child: const Text('Simpan'));
+    return ElevatedButton(
+      onPressed: () {
+        String kodeProduk = _kodeProdukTextboxController.text;
+        String namaProduk = _namaProdukTextboxController.text;
+        int harga = int.parse(
+            _hargaProdukTextboxController.text); //parsing dari String ke int
+        // pindah ke halaman Produk Detail dan mengirim data
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => ProdukDetail(
+                  kodeProduk: kodeProduk,
+                  namaProduk: namaProduk,
+                  harga: harga,
+                )));
+      },
+      child: const Text('Simpan'));
   }
 }
