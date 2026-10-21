@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_materi_3/hello_world.dart';
+import 'package:flutter_materi_3/biodata.dart';
 
 void main() {
   runApp(const MainApp());
@@ -12,7 +12,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Aplikasi Flutter Pertama',
-      home: HelloWorld(),
+      home: Biodata(),
     );
   }
 }
