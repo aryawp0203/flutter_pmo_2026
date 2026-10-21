@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pmo_2026/column_widget.dart';
-import 'package:flutter_pmo_2026/counter.dart';
-import 'package:flutter_pmo_2026/row_widget.dart';
+import 'package:flutter_pmo_2026/profil_widget.dart';
 
 void main() {
   runApp(const MainApp());
@@ -14,13 +12,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Aplikasi Flutter Pertama',
-      // home: Column(
-      //   children: const [
-      //     Expanded(child: ColumnWidget()),
-      //     Expanded(child: RowWidget()),
-      //   ]
-      // ),
-      home: const Counter(),
+      home: const ProfilWidget(),
     );
   }
 }
