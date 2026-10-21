@@ -45,6 +45,8 @@ Pemisahan berkas tampilan (antarmuka) ke dalam sub-folder `lib/ui/` bertujuan me
   * **Kode Produk**: Input teks dasar dengan label.
   * **Nama Produk**: Input teks untuk nama item produk.
   * **Harga Produk**: Dikonfigurasi dengan `keyboardType: TextInputType.number`, batas panjang karakter `maxLength: 12`, ikon `prefixIcon`, serta gaya `OutlineInputBorder()`.
+  * **Stok**: Input teks angka (`TextInputType.number`) untuk jumlah ketersediaan produk.
+  * **Satuan**: Input teks untuk satuan kuantitas barang (misal: Pcs, Box, Kg).
 * **`ElevatedButton`**: Tombol aksi untuk memicu aksi simpan data formulir.
 
 ### 3. Pemisahan Widget ke dalam Metode (Method Extraction)
@@ -52,6 +54,8 @@ Untuk menjaga method `build()` tetap ringkas dan mudah dipahami, komponen-kompon
 - `_textboxKodeProduk()`: Mengembalikan widget `TextField` kode produk.
 - `_textboxNamaProduk()`: Mengembalikan widget `TextField` nama produk.
 - `_textboxHargaProduk()`: Mengembalikan widget `TextField` harga produk beserta dekorasi input.
+- `_textboxStokProduk()`: Mengembalikan widget `TextField` stok produk dengan input numerik.
+- `_textboxSatuanProduk()`: Mengembalikan widget `TextField` satuan produk.
 - `_tombolSimpan()`: Mengembalikan widget `ElevatedButton` tombol simpan.
 
 ---

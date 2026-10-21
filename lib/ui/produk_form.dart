@@ -13,13 +13,18 @@ class _ProdukFormState extends State<ProdukForm> {
     return Scaffold(
       appBar: AppBar(title: const Text('Form Produk')),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            _textboxKodeProduk(),
-            _textboxNamaProduk(),
-            _textboxHargaProduk(),
-            _tombolSimpan(),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              _textboxKodeProduk(),
+              _textboxNamaProduk(),
+              _textboxHargaProduk(),
+              _textboxStokProduk(),
+              _textboxSatuanProduk(),
+              _tombolSimpan(),
+            ],
+          ),
         ),
       ),
     );
@@ -47,6 +52,19 @@ class _ProdukFormState extends State<ProdukForm> {
       ),
       keyboardType: TextInputType.number,
       maxLength: 12,
+    );
+  }
+
+  TextField _textboxStokProduk() {
+    return TextField(
+      decoration: const InputDecoration(labelText: 'Stok'),
+      keyboardType: TextInputType.number,
+    );
+  }
+
+  TextField _textboxSatuanProduk() {
+    return TextField(
+      decoration: const InputDecoration(labelText: 'Satuan'),
     );
   }
 
