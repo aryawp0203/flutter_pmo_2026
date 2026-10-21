@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_materi_3/biodata.dart';
+import 'package:flutter_pmo_2026/biodata.dart';
 
 void main() {
   runApp(const MainApp());
