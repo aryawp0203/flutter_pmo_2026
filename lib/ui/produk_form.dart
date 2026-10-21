@@ -8,6 +8,10 @@ class ProdukForm extends StatefulWidget {
 }
 
 class _ProdukFormState extends State<ProdukForm> {
+  final _kodeProdukTextboxController = TextEditingController();
+  final _namaProdukTextboxController = TextEditingController();
+  final _hargaProdukTextboxController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,8 +24,6 @@ class _ProdukFormState extends State<ProdukForm> {
               _textboxKodeProduk(),
               _textboxNamaProduk(),
               _textboxHargaProduk(),
-              _textboxStokProduk(),
-              _textboxSatuanProduk(),
               _tombolSimpan(),
             ],
           ),
@@ -32,39 +34,22 @@ class _ProdukFormState extends State<ProdukForm> {
 
   TextField _textboxKodeProduk() {
     return TextField(
-      decoration: const InputDecoration(labelText: 'Kode Produk'),
+      decoration: const InputDecoration(labelText: "Kode Produk"),
+      controller: _kodeProdukTextboxController,
     );
   }
 
   TextField _textboxNamaProduk() {
     return TextField(
-      decoration: const InputDecoration(labelText: 'Nama Produk'),
+      decoration: const InputDecoration(labelText: "Nama Produk"),
+      controller: _namaProdukTextboxController,
     );
   }
 
   TextField _textboxHargaProduk() {
     return TextField(
-      decoration: const InputDecoration(
-        labelText: "Harga",
-        hintText: "Contoh: 2500000",
-        prefixIcon: Icon(Icons.numbers),
-        border: OutlineInputBorder(),
-      ),
-      keyboardType: TextInputType.number,
-      maxLength: 12,
-    );
-  }
-
-  TextField _textboxStokProduk() {
-    return TextField(
-      decoration: const InputDecoration(labelText: 'Stok'),
-      keyboardType: TextInputType.number,
-    );
-  }
-
-  TextField _textboxSatuanProduk() {
-    return TextField(
-      decoration: const InputDecoration(labelText: 'Satuan'),
+      decoration: const InputDecoration(labelText: "Harga"),
+      controller: _hargaProdukTextboxController,
     );
   }
 

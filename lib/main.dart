@@ -13,7 +13,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Aplikasi Flutter Pertama',
-      home: const ProdukDetail(),
+      home: const ProdukForm(),
     );
   }
 }
