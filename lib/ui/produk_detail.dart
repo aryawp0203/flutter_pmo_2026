@@ -20,19 +20,55 @@ class _ProdukDetailState extends State<ProdukDetail> {
       appBar: AppBar(
         title: const Text('Detail Produk'),
       ),
-      body: Column(
-        children: [
-          Text("Kode Produk : ${widget.kodeProduk}"),
-          Text("Nama Produk : ${widget.namaProduk}"),
-          Text("Harga : ${widget.harga}"),
-          Text("Stok : ${widget.stok}"),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: const Text('Kembali'),
-          ),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Kode Produk : ${widget.kodeProduk}",
+              style: const TextStyle(
+                fontSize: 16.0,
+                fontWeight: FontWeight.w500,
+                color: Colors.black87,
+              ),
+            ),
+            const SizedBox(height: 10),
+            Text(
+              "Nama Produk : ${widget.namaProduk}",
+              style: const TextStyle(
+                fontSize: 18.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.indigo,
+              ),
+            ),
+            const SizedBox(height: 10),
+            Text(
+              "Harga : ${widget.harga}",
+              style: const TextStyle(
+                fontSize: 16.0,
+                fontWeight: FontWeight.w600,
+                color: Colors.green,
+              ),
+            ),
+            const SizedBox(height: 10),
+            Text(
+              "Stok : ${widget.stok}",
+              style: const TextStyle(
+                fontSize: 16.0,
+                fontWeight: FontWeight.w500,
+                color: Colors.deepOrange,
+              ),
+            ),
+            const SizedBox(height: 24),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text('Kembali'),
+            ),
+          ],
+        ),
       ),
     );
   }
