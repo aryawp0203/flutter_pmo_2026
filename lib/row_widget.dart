@@ -10,6 +10,8 @@ class RowWidget extends StatelessWidget {
         title: const Text('Widget Row'),
       ),
       body: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
           Text('Baris 1'),
           Text('Baris 2'),
