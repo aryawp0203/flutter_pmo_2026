@@ -42,6 +42,14 @@ class _ProdukPageState extends State<ProdukPage> {
           ),
           // List 3
           ItemProduk(kodeProduk: 'A003', namaProduk: 'TV', harga: 3000000),
+          // List 4
+          ItemProduk(kodeProduk: 'A004', namaProduk: 'AC', harga: 3500000),
+          // List 5
+          ItemProduk(
+            kodeProduk: 'A005',
+            namaProduk: 'Microwave',
+            harga: 1500000,
+          ),
         ],
       ),
     );
