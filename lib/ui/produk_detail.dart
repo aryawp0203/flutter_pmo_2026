@@ -26,6 +26,12 @@ class _ProdukDetailState extends State<ProdukDetail> {
           Text("Nama Produk : ${widget.namaProduk}"),
           Text("Harga : ${widget.harga}"),
           Text("Stok : ${widget.stok}"),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: const Text('Kembali'),
+          ),
         ],
       ),
     );
