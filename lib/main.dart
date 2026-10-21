@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_pmo_2026/ui/produk_detail.dart';
 import 'package:flutter_pmo_2026/ui/produk_form.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Aplikasi Flutter Pertama',
-      home: const ProdukForm(),
+      home: const ProdukDetail(),
     );
   }
 }
