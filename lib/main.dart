@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_pmo_2026/ui/barang_page.dart';
+import 'package:flutter_pmo_2026/ui/gudang_menu.dart';
 import 'package:flutter_pmo_2026/ui/produk_page.dart';
 
 void main() {
@@ -12,8 +14,8 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Aplikasi Flutter Pertama',
-      home: const ProdukPage(),
+      title: 'Latihan UTS',
+      home: const BarangPage(),
     );
   }
 }
