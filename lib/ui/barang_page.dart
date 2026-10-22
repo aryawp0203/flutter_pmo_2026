@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pmo_2026/ui/barang_detail.dart';
 import 'package:flutter_pmo_2026/ui/barang_form.dart';
+import 'package:flutter_pmo_2026/ui/kelola_stok.dart';
 
 class BarangPage extends StatefulWidget {
   const BarangPage({super.key});
@@ -44,7 +45,7 @@ class _BarangPageState extends State<BarangPage> {
             children: [
               ElevatedButton(
                 onPressed: () {
-                  // Navigator.push(context, MaterialPageRoute(builder: (context) => const KelolaStokPage()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const KelolaStokPage()));
                 },
                 child: const Text('Kelola Stok'),
               ),
