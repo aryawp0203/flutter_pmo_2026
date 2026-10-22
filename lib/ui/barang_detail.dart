@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_pmo_2026/ui/barang_rusak_form.dart';
+import 'package:flutter_pmo_2026/ui/kelola_stok_form.dart';
 
 class BarangDetail extends StatefulWidget {
   final String? kodeBarang;
@@ -63,19 +65,19 @@ class _BarangDetailState extends State<BarangDetail> {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => const KelolaStokForm()),
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const KelolaStokForm()),
+                    );
                   },
                   child: const Text('+ Kelola Stok'),
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => const BarangRusakForm()),
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const BarangRusakForm()),
+                    );
                   },
                   child: const Text('+ Lapor Rusak'),
                 ),
