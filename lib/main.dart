@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pmo_2026/ui/barang_page.dart';
 import 'package:flutter_pmo_2026/ui/gudang_menu.dart';
-import 'package:flutter_pmo_2026/ui/produk_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -15,7 +13,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Latihan UTS',
-      home: const BarangPage(),
+      home: const GudangMenu(),
     );
   }
 }

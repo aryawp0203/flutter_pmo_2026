@@ -55,12 +55,12 @@ class _KelolaStokPageState extends State<KelolaStokPage> {
           Center(
             child: ElevatedButton(
               onPressed: () {
-                Navigator.pushAndRemoveUntil(
-                  context,
-                  MaterialPageRoute(builder: (context) => const BarangPage()),
-                  (route) => false, // Menghapus semua rute sebelumnya
-                );
-                // Navigator.pop(context);
+                // Navigator.pushAndRemoveUntil(
+                //   context,
+                //   MaterialPageRoute(builder: (context) => const BarangPage()),
+                //   (route) => false, // Menghapus semua rute sebelumnya
+                // );
+                Navigator.pop(context);
               },
               child: const Text('Kembali ke Data Barang'),
             ),
